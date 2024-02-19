@@ -47,9 +47,9 @@ public class SellCards extends AbstractAction {
         int currentPlayer = gs.getCurrentPlayer();
 
         // TODO: Follow lab 1 instructions (Section 3.1) to fill in this method here.
-        // remove the cards being sold from the player's hand
+        // 1. remove the cards being sold from the player's hand
         jgs.getPlayerHands().get(currentPlayer).get(goodType).decrement(howMany);
-        // give the player good tokens
+        // 2. give the player good tokens
         Deck<JaipurToken> goodTokens = jgs.getGoodTokens().get(goodType);
         boolean empty = goodTokens.getSize() == 0;
         if(!empty){
@@ -61,11 +61,11 @@ public class SellCards extends AbstractAction {
                 }
             }
         }
-        //
+        // 3. check if any pile should be empty
         if(!empty && goodTokens.getSize() == 0) {
             ((JaipurGameState) gs).getnGoodTokensSold().increment();
         }
-        //
+        // 4. check if a bonus token need to award
         if(jgs.getBonusTokens().containsKey(howMany)) {
             Deck<JaipurToken> bonusTokens = jgs.getBonusTokens().get(howMany);
             if(bonusTokens.getSize()>0) {

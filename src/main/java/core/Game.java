@@ -833,7 +833,8 @@ public class Game {
         // 1. Set up the players for the game.
         ArrayList<AbstractPlayer> players = new ArrayList<>();
         players.add(new RandomPlayer());
-        players.add(new RandomPlayer());
+        players.add(new HumanGUIPlayer(ac));
+        //players.add(new RandomPlayer());
 
 //        RMHCParams params = new RMHCParams();
 //        params.horizon = 15;

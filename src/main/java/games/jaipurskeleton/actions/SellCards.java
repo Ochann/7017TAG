@@ -66,19 +66,39 @@ public class SellCards extends AbstractAction {
             ((JaipurGameState) gs).getnGoodTokensSold().increment();
         }
         // 4. check if a bonus token need to award
-        if(jgs.getBonusTokens().containsKey(howMany)) {
+        if(howMany >= 3) {
+            boolean hasBonusToken = true;
             Deck<JaipurToken> bonusTokens = jgs.getBonusTokens().get(howMany);
-            if(bonusTokens.getSize()>0) {
+            if(bonusTokens.getSize() <= 0) {
+                hasBonusToken = false;
+                if(howMany >= 5) {
+                    bonusTokens = jgs.getBonusTokens().get(4);
+                    if(bonusTokens.getSize() <= 0) {
+                        bonusTokens = jgs.getBonusTokens().get(3);
+                        if(bonusTokens.getSize() > 0) {
+                            hasBonusToken = true;
+                        }
+                    }
+                    else {
+                        hasBonusToken = true;
+                    }
+                }
+                else if (howMany == 4) {
+                    bonusTokens = jgs.getBonusTokens().get(3);
+                    if(bonusTokens.getSize() > 0) {
+                        hasBonusToken = true;
+                    }
+                }
+            }
+            if(hasBonusToken) {
                 JaipurToken token = bonusTokens.draw();
                 jgs.getPlayerScores().get(currentPlayer).increment(token.tokenValue);
                 jgs.getPlayerNBonusTokens().get(currentPlayer).increment();
             }
-            // extra
         }
 
-        if(howMany >= 5) {
 
-        }
+
         return true;
     }
 

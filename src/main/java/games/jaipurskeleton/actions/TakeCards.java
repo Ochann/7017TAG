@@ -49,6 +49,20 @@ public class TakeCards extends AbstractAction {
                 // TODO 1: Remove all camels from the market
                 // TODO 1: Refill market with cards from the draw deck, to recquried market size
                 // TODO 1: If the draw deck becomes empty when trying to draw a new card, set `triggerRoundEnd` boolean flag to true
+                jgs.getPlayerHerds().add(jgs.getMarket().get(goodType));
+                jgs.getMarket().get(goodType).setValue(0);
+                int marketSize = jgs.getMarket().size();
+                for (int i=0; i<(5-marketSize); i++) {
+                    if(jgs.getDrawDeck().getSize() == 0) {
+                        triggerRoundEnd = true;
+                    }
+                    else {
+                        JaipurCard.GoodType gt = jgs.getDrawDeck().draw().goodType;
+                        if (gt != null) {
+                            jgs.getMarket().get(gt).increment(1);
+                        }
+                    }
+                }
 
                 return true;
 
@@ -59,6 +73,17 @@ public class TakeCards extends AbstractAction {
                 // TODO 2: Reduce the number of cards in the market of this type by 1
                 // TODO 2: Draw a new card from the draw deck (jgs.getDrawDeck().draw()) and increment the corresponding type in the market by 1
                 // TODO 2: If the draw deck becomes empty when trying to draw a new card, set `triggerRoundEnd` boolean flag to true
+                jgs.getPlayerHands().get(playerID).get(goodType).increment(1);
+                jgs.getMarket().get(goodType).decrement(1);
+                if(jgs.getDrawDeck().getSize() == 0) {
+                    triggerRoundEnd = true;
+                }
+                else {
+                    JaipurCard.GoodType gt = jgs.getDrawDeck().draw().goodType;
+                    if (gt != null) {
+                        jgs.getMarket().get(gt).increment(1);
+                    }
+                }
 
                 return true;
             }

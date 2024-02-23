@@ -136,6 +136,7 @@ public class JaipurGameState extends AbstractGameState {
             }
 
             // Hide! Shuffle together opponent player hands and the deck
+            // Q: Why do we shuffle opponent player hands and the deck together?
             // TODO: Iterate through the players. If they're not the `playerId` observing the state (passed as argument to this method), then:
             // TODO: Iterate through the good types in their hands. Set all to 0 *in the copy*.
             // TODO: Count how many cards each player has in their hands in total.
@@ -143,17 +144,52 @@ public class JaipurGameState extends AbstractGameState {
             // TODO: After going through all the players, shuffle the *copy draw deck*.
             for (int p = 0; p < getNPlayers(); p++) {
                 if(p != playerId) {
-                    for(JaipurCard.GoodType gt: getPlayerHands().get(playerId).keySet()) {
+                    for(JaipurCard.GoodType gt: getPlayerHands().get(p).keySet()) {
+                        int inHandGT = playerHands.get(p).get(gt).getValue();
                         copy.playerHands.get(p).get(gt).setValue(0);
+                        for (int i = 0; i < inHandGT; i++) {
+                            JaipurCard card = new JaipurCard(gt);
+                            copy.drawDeck.add(card);
+                        }
                     }
                 }
             }
+            copy.drawDeck.shuffle(r);
 
             // Then draw new cards for opponent
             // TODO: Iterate through the players. If they're the `playerId` observing the state (passed as argument to this method), copy the exact hand of the player into the *copy game state*
             // TODO: Otherwise, draw new cards from the *copy draw deck* and update the *copy player hand* appropriately (you can check this same functionality in the round setup performed in the Forward Model for help)
             // TODO: Make sure to ignore camels, and put them back at the bottom of the *copy draw deck*, e.g. copy.drawDeck.add(card,copy.drawDeck.getSize()); Camels don't stay in player's hands, so we're only filling hands with non-camel cards
             // TODO: At the end of this process, reshuffle the *copy draw deck* to make sure any camels that were drawn and put back are randomly distributed too
+            for (int p = 0; p < getNPlayers(); p++) {
+                if(p == playerId) {
+                    for(JaipurCard.GoodType gt: getPlayerHands().get(p).keySet()) {
+                        copy.playerHands.get(p).get(gt).setValue(playerHands.get(p).get(gt).getValue());
+                    }
+                }
+                else {
+                    // Q: how many cards should opponent draw? 5 or current cards number in hand?
+                    int inHandTotal = 0;
+                    for(JaipurCard.GoodType gt: getPlayerHands().get(p).keySet()) {
+                        inHandTotal += playerHands.get(p).get(gt).getValue();
+                    }
+                    System.out.println("Opponent in hand: ");
+                    System.out.println(inHandTotal);
+                    for (int i = 0; i < inHandTotal; i++) {
+                        JaipurCard card = copy.drawDeck.draw();
+                        if(card!=null) {
+                            if (card.goodType != JaipurCard.GoodType.Camel) {
+                                copy.playerHands.get(p).get(card.goodType).increment();
+                            } else {
+                                copy.drawDeck.add(card, copy.drawDeck.getSize());
+                                i--;
+                            }
+                        }
+                    }
+                }
+            }
+            copy.drawDeck.shuffle(r);
+
         }
         return copy;
     }

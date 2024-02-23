@@ -61,7 +61,7 @@ public class SellCards extends AbstractAction {
                 }
             }
         }
-        // 3. check if any pile should be empty
+        // 3. check if any pile should be empty in this turn
         if(!empty && goodTokens.getSize() == 0) {
             ((JaipurGameState) gs).getnGoodTokensSold().increment();
         }

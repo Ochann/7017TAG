@@ -49,10 +49,11 @@ public class TakeCards extends AbstractAction {
                 // TODO 1: Remove all camels from the market
                 // TODO 1: Refill market with cards from the draw deck, to recquried market size
                 // TODO 1: If the draw deck becomes empty when trying to draw a new card, set `triggerRoundEnd` boolean flag to true
-                jgs.getPlayerHerds().add(jgs.getMarket().get(goodType));
+                int camelNum = jgs.getMarket().get(goodType).getValue();
+                jgs.getPlayerHerds().get(playerID).increment(camelNum);
                 jgs.getMarket().get(goodType).setValue(0);
-                int marketSize = jgs.getMarket().size();
-                for (int i=0; i<(5-marketSize); i++) {
+                for (int i=0; i<camelNum; i++) {
+                    //System.out.println("add\n");
                     if(jgs.getDrawDeck().getSize() == 0) {
                         triggerRoundEnd = true;
                     }

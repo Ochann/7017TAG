@@ -50,6 +50,12 @@ public class JaipurParameters extends AbstractParameters {
         put ( JaipurCard.GoodType.Spice, new Integer []{1 ,1 ,2 ,2 ,3 ,3 ,5}) ;
         put ( JaipurCard.GoodType.Leather, new Integer []{1 ,1 ,1 ,1 ,1 ,1 ,2 ,3 ,4}) ;
     }};
+    // 5 more parameters
+    int nPlayerHandLimit = 7;
+    int nInitialCardsInHand = 5;
+    int nMaximumCardsInMarket = 5;
+    int nInitialCamelInMarket = 3;
+    int nMaximumCamelInGame = 11;
 
     // Copy constructor
     private JaipurParameters(JaipurParameters jaipurParameters) {
@@ -67,6 +73,11 @@ public class JaipurParameters extends AbstractParameters {
         for (JaipurCard.GoodType gt : jaipurParameters.getGoodTokensProgression().keySet()){
             this.goodTokensProgression.put(gt, jaipurParameters.getGoodTokensProgression().get(gt).clone());
         }
+        this.nPlayerHandLimit = jaipurParameters.nPlayerHandLimit;
+        this.nInitialCardsInHand = jaipurParameters.nInitialCardsInHand;
+        this.nMaximumCardsInMarket = jaipurParameters.nMaximumCardsInMarket;
+        this.nInitialCamelInMarket = jaipurParameters.nInitialCamelInMarket;
+        this.nMaximumCamelInGame = jaipurParameters.nMaximumCamelInGame;
 
     }
 
@@ -98,11 +109,11 @@ public class JaipurParameters extends AbstractParameters {
         if (this == o) return true;
         if (!(o instanceof JaipurParameters that)) return false;
         if (!super.equals(o)) return false;
-        return Objects.equals(goodTokensProgression, that.goodTokensProgression) && nRoundsWinForGameWin == that.nRoundsWinForGameWin && nPointsMostCamels == that.nPointsMostCamels && nGoodTokensEmptyRoundEnd == that.nGoodTokensEmptyRoundEnd && Objects.equals(goodNCardsMinimumSell, that.goodNCardsMinimumSell) && Objects.equals(bonusTokensAvailable, that.bonusTokensAvailable);
+        return nMaximumCamelInGame == that.nMaximumCamelInGame && nInitialCamelInMarket == that.nInitialCamelInMarket && nMaximumCardsInMarket == that.nMaximumCardsInMarket && nInitialCardsInHand == that.nInitialCardsInHand && nPlayerHandLimit == that.nPlayerHandLimit && Objects.equals(goodTokensProgression, that.goodTokensProgression) && nRoundsWinForGameWin == that.nRoundsWinForGameWin && nPointsMostCamels == that.nPointsMostCamels && nGoodTokensEmptyRoundEnd == that.nGoodTokensEmptyRoundEnd && Objects.equals(goodNCardsMinimumSell, that.goodNCardsMinimumSell) && Objects.equals(bonusTokensAvailable, that.bonusTokensAvailable);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), goodTokensProgression, goodNCardsMinimumSell, bonusTokensAvailable, nPointsMostCamels, nGoodTokensEmptyRoundEnd);
+        return Objects.hash(super.hashCode(), nMaximumCamelInGame, nInitialCamelInMarket, nMaximumCardsInMarket, nInitialCardsInHand, nPlayerHandLimit, goodTokensProgression, goodNCardsMinimumSell, bonusTokensAvailable, nPointsMostCamels, nGoodTokensEmptyRoundEnd);
     }
 }

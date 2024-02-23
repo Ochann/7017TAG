@@ -141,6 +141,13 @@ public class JaipurGameState extends AbstractGameState {
             // TODO: Count how many cards each player has in their hands in total.
             // TODO: Add new JaipurCard objects of the corresponding type to the *copy draw deck*, as many as the player has in their hand.
             // TODO: After going through all the players, shuffle the *copy draw deck*.
+            for (int p = 0; p < getNPlayers(); p++) {
+                if(p != playerId) {
+                    for(JaipurCard.GoodType gt: getPlayerHands().get(playerId).keySet()) {
+                        copy.playerHands.get(p).get(gt).setValue(0);
+                    }
+                }
+            }
 
             // Then draw new cards for opponent
             // TODO: Iterate through the players. If they're the `playerId` observing the state (passed as argument to this method), copy the exact hand of the player into the *copy game state*

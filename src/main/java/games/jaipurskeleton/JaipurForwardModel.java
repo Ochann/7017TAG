@@ -347,7 +347,7 @@ public class JaipurForwardModel extends StandardForwardModel {
                 jgs.recordHistory("Round scores: " + scores);
             }
 
-            if (roundsWon == 2) {
+            if (roundsWon == jp.nRoundsWinForGameWin) {
                 // Game over, this player won
                 jgs.setGameStatus(CoreConstants.GameResult.GAME_END);
                 for (int i = 0; i < jgs.getNPlayers(); i++) {

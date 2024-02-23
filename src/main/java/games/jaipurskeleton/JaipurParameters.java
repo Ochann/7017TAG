@@ -40,6 +40,9 @@ public class JaipurParameters extends AbstractParameters {
         super();
     }
 
+    // new parameters
+    int nRoundsWinForGameWin = 2;
+
     // Copy constructor
     private JaipurParameters(JaipurParameters jaipurParameters) {
         super();
@@ -50,6 +53,8 @@ public class JaipurParameters extends AbstractParameters {
         }
         this.nPointsMostCamels = jaipurParameters.getNPointsMostCamels();
         this.nGoodTokensEmptyRoundEnd = jaipurParameters.getNGoodTokensEmptyGameEnd();
+        //
+        this.nRoundsWinForGameWin = jaipurParameters.getNRoundsWinForGameWin();
     }
 
     public Map<JaipurCard.GoodType, Integer> getGoodNCardsMinimumSell() {
@@ -64,9 +69,10 @@ public class JaipurParameters extends AbstractParameters {
         return nPointsMostCamels;
     }
 
-    public int getNGoodTokensEmptyGameEnd() {
-        return nGoodTokensEmptyRoundEnd;
-    }
+    public int getNGoodTokensEmptyGameEnd() { return nGoodTokensEmptyRoundEnd; }
+
+    // new functions for new parameters
+    public int getNRoundsWinForGameWin() { return nRoundsWinForGameWin; }
 
     @Override
     protected AbstractParameters _copy() {
@@ -78,11 +84,13 @@ public class JaipurParameters extends AbstractParameters {
         if (this == o) return true;
         if (!(o instanceof JaipurParameters that)) return false;
         if (!super.equals(o)) return false;
-        return nPointsMostCamels == that.nPointsMostCamels && nGoodTokensEmptyRoundEnd == that.nGoodTokensEmptyRoundEnd && Objects.equals(goodNCardsMinimumSell, that.goodNCardsMinimumSell) && Objects.equals(bonusTokensAvailable, that.bonusTokensAvailable);
+        //return nPointsMostCamels == that.nPointsMostCamels && nGoodTokensEmptyRoundEnd == that.nGoodTokensEmptyRoundEnd && Objects.equals(goodNCardsMinimumSell, that.goodNCardsMinimumSell) && Objects.equals(bonusTokensAvailable, that.bonusTokensAvailable);
+        return nRoundsWinForGameWin == that.nRoundsWinForGameWin && nPointsMostCamels == that.nPointsMostCamels && nGoodTokensEmptyRoundEnd == that.nGoodTokensEmptyRoundEnd && Objects.equals(goodNCardsMinimumSell, that.goodNCardsMinimumSell) && Objects.equals(bonusTokensAvailable, that.bonusTokensAvailable);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), goodNCardsMinimumSell, bonusTokensAvailable, nPointsMostCamels, nGoodTokensEmptyRoundEnd);
+        //return Objects.hash(super.hashCode(), goodNCardsMinimumSell, bonusTokensAvailable, nPointsMostCamels, nGoodTokensEmptyRoundEnd);
+        return Objects.hash(super.hashCode(), nRoundsWinForGameWin, goodNCardsMinimumSell, bonusTokensAvailable, nPointsMostCamels, nGoodTokensEmptyRoundEnd);
     }
 }

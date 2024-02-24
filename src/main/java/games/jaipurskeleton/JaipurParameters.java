@@ -2,8 +2,13 @@ package games.jaipurskeleton;
 
 import core.AbstractGameState;
 import core.AbstractParameters;
+import core.Game;
+import evaluation.optimisation.TunableParameters;
+import games.GameType;
 import games.jaipurskeleton.components.JaipurCard;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +23,8 @@ import java.util.Objects;
  * <p>The class can optionally extend from {@link evaluation.optimisation.TunableParameters} instead, which allows to use
  * automatic game parameter optimisation tools in the framework.</p>
  */
-public class JaipurParameters extends AbstractParameters {
+//public class JaipurParameters extends AbstractParameters {
+public class JaipurParameters extends TunableParameters {
     Map<JaipurCard.GoodType, Integer> goodNCardsMinimumSell = new HashMap<JaipurCard.GoodType, Integer>() {{
         put(JaipurCard.GoodType.Diamonds, 2);
         put(JaipurCard.GoodType.Gold, 2);
@@ -79,6 +85,13 @@ public class JaipurParameters extends AbstractParameters {
         this.nInitialCamelInMarket = jaipurParameters.nInitialCamelInMarket;
         this.nMaximumCamelInGame = jaipurParameters.nMaximumCamelInGame;
 
+        // add tunable params
+        addTunableParameter("nPointsMostCamels", 5, Arrays.asList(0, 2, 5, 7, 10));
+        for(JaipurCard.GoodType gt: goodNCardsMinimumSell.keySet()) {
+            addTunableParameter(gt.name() + "minSell", goodNCardsMinimumSell.get(gt), Arrays.asList(1, 2, 3, 4, 5));
+        }
+        // TODO: add the rest of params as tunable params(ignore goodTokensProgression and bonusTokensAvailable
+        addTunableParameter("nGoodTokensEmptyRoundEnd", 3, Arrays.asList(2, 3, 4, 5));
     }
 
     public Map<JaipurCard.GoodType, Integer> getGoodNCardsMinimumSell() {
@@ -113,7 +126,38 @@ public class JaipurParameters extends AbstractParameters {
     }
 
     @Override
+    public void _reset() {
+        nPointsMostCamels = (int) getParameterValue("nPointsMostCamels");
+        goodNCardsMinimumSell.replaceAll((gt, v)->(Integer) getParameterValue(gt.name() + "minSell"));
+        // TODO: add the rest of params as tunable params(ignore goodTokensProgression and bonusTokensAvailable
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), nMaximumCamelInGame, nInitialCamelInMarket, nMaximumCardsInMarket, nInitialCardsInHand, nPlayerHandLimit, goodTokensProgression, goodNCardsMinimumSell, bonusTokensAvailable, nPointsMostCamels, nGoodTokensEmptyRoundEnd);
+    }
+
+    @Override
+    public Object instantiate() {
+        return new Game(GameType.Jaipur, new JaipurForwardModel(), new JaipurGameState(this, GameType.Jaipur.getMinPlayers()));
+    }
+
+    // new function to print out the params configurations used in various experiments
+
+    @Override
+    public String toString() {
+        return "JaipurParameters{" +
+                "goodNCardsMinimumSell=" + goodNCardsMinimumSell +
+                ", bonusTokensAvailable=" + bonusTokensAvailable +
+                ", nPointsMostCamels=" + nPointsMostCamels +
+                ", nGoodTokensEmptyRoundEnd=" + nGoodTokensEmptyRoundEnd +
+                ", nRoundsWinForGameWin=" + nRoundsWinForGameWin +
+                ", goodTokensProgression=" + goodTokensProgression +
+                ", nPlayerHandLimit=" + nPlayerHandLimit +
+                ", nInitialCardsInHand=" + nInitialCardsInHand +
+                ", nMaximumCardsInMarket=" + nMaximumCardsInMarket +
+                ", nInitialCamelInMarket=" + nInitialCamelInMarket +
+                ", nMaximumCamelInGame=" + nMaximumCamelInGame +
+                '}';
     }
 }

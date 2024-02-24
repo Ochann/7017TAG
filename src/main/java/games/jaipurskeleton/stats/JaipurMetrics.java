@@ -15,7 +15,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class JaipurMetrics {
-    static class RoundScoreDifference extends AbstractMetric {
+    static public class RoundScoreDifference extends AbstractMetric {
         public RoundScoreDifference() {
             super();
         }
@@ -45,7 +45,7 @@ public class JaipurMetrics {
         }
     }
 
-    static class PurchaseFromMarket extends  AbstractMetric {
+    static public class PurchaseFromMarket extends AbstractMetric {
         JaipurCard.GoodType[] goodTypes;
 
         public PurchaseFromMarket(){
@@ -86,6 +86,28 @@ public class JaipurMetrics {
                 columns.put("Purchase-"+type.name(), Integer.class);
             }
             return columns;
+        }
+    }
+
+    // TODO: Exercise - add two more metric classes
+    static public class WinGamesFirstPlayer extends AbstractMetric {
+        public WinGamesFirstPlayer() {
+            super();
+        }
+
+        @Override
+        protected boolean _run(MetricsGameListener listener, Event e, Map<String, Object> records) {
+            return false;
+        }
+
+        @Override
+        public Set<IGameEvent> getDefaultEventTypes() {
+            return Collections.singleton(Event.GameEvent.GAME_OVER);
+        }
+
+        @Override
+        public Map<String, Class<?>> getColumns(int nPlayersPerGame, Set<String> playerNames) {
+            return null;
         }
     }
 }

@@ -68,7 +68,9 @@ public class SellCards extends AbstractAction {
         // 4. check if a bonus token need to award
         if(howMany >= 3) {
             boolean hasBonusToken = true;
-            Deck<JaipurToken> bonusTokens = jgs.getBonusTokens().get(howMany);
+            Deck<JaipurToken> bonusTokens;
+            if(howMany>5) bonusTokens = jgs.getBonusTokens().get(5);
+            else bonusTokens = jgs.getBonusTokens().get(howMany);
             if(bonusTokens.getSize() <= 0) {
                 hasBonusToken = false;
                 if(howMany >= 5) {

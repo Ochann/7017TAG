@@ -104,7 +104,6 @@ public class JaipurMetrics {
             JaipurGameState gs = (JaipurGameState) e.state;
             int winGames = 0;
             if(gs.getWinners().contains(gs.getFirstPlayer())) winGames += 1;
-            System.out.println("-----------------");
             System.out.println("Winner: ");
             System.out.println(gs.getWinners());
             System.out.println("FirstPlayer: ");
@@ -154,7 +153,6 @@ public class JaipurMetrics {
             //System.out.println("Winner: ");
             //System.out.println(gs.getWinners());
             //System.out.println("Player with max camels: " + Integer.toString(pIdMaxCamels.iterator().next()));
-
             records.put("WinGames", winGames);
             return true;
         }

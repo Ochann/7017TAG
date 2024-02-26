@@ -308,6 +308,8 @@ public class JaipurForwardModel extends StandardForwardModel {
             if (jgs.getCoreGameParameters().recordEventHistory) {
                 jgs.recordHistory("Round scores: " + scores);
             }
+            // TODO : add my own event to pass the last winner for this round , also remember to change in jaipurmetrics
+            //jgs.logEvent();
 
             if (roundsWon == jp.nRoundsWinForGameWin) {
                 // Game over, this player won

@@ -34,6 +34,9 @@ public class JaipurGameState extends AbstractGameState {
     List<Counter> playerNRoundsWon;
     List<Counter> playerNBonusTokens, playerNGoodTokens;  // Tiebreak counts
 
+    //int playerGetCamelPoints;
+    //int getPlayerGetCamelPoints() {return playerGetCamelPoints;}
+
     /**
      * @param gameParameters - game parameters.
      * @param nPlayers       - number of players in the game
@@ -173,8 +176,8 @@ public class JaipurGameState extends AbstractGameState {
                     for(JaipurCard.GoodType gt: getPlayerHands().get(p).keySet()) {
                         inHandTotal += playerHands.get(p).get(gt).getValue();
                     }
-                    System.out.println("Opponent in hand: ");
-                    System.out.println(inHandTotal);
+                    //System.out.println("Opponent in hand: ");
+                    //System.out.println(inHandTotal);
                     for (int i = 0; i < inHandTotal; i++) {
                         JaipurCard card = copy.drawDeck.draw();
                         if(card!=null) {

@@ -224,7 +224,8 @@ public class JaipurForwardModel extends StandardForwardModel {
         // Can take cards from the market, respecting hand limit
         // Option C: Take all camels, they don't count towards hand limit
         // Q: How to count towards hand limit?
-        // TODO 1: Check how many camel cards are in the market. If more than 0, construct one TakeCards action object and add it to the `actions` ArrayList. (The `howManyPerTypeGiveFromHand` argument should be null)
+        // TODO 1: Check how many camel cards are in the market. If more than 0,
+        // TODO 1:construct one TakeCards action object and add it to the `actions` ArrayList. (The `howManyPerTypeGiveFromHand` argument should be null)
         if(jgs.getMarket().containsKey(JaipurCard.GoodType.Camel)) {
             int camelNum = jgs.getMarket().get(JaipurCard.GoodType.Camel).getValue();
             if (camelNum > 0) {
@@ -240,7 +241,8 @@ public class JaipurForwardModel extends StandardForwardModel {
         // Check hand limit for taking non-camel cards in hand
         if (nCardsInHand < jp.nPlayerHandLimit) {
             // Option B: Take a single (non-camel) card from the market
-            // TODO 2: For each good type in the market, if there is at least 1 of that type (which is not a Camel), construct one TakeCards action object to take 1 of that type from the market, and add it to the `actions` ArrayList. (The `howManyPerTypeGiveFromHand` argument should be null)
+            // TODO 2: For each good type in the market, if there is at least 1 of that type (which is not a Camel),
+            // TODO 2: construct one TakeCards action object to take 1 of that type from the market, and add it to the `actions` ArrayList. (The `howManyPerTypeGiveFromHand` argument should be null)
             for(JaipurCard.GoodType gt: jgs.getMarket().keySet()) {
                 if(gt != JaipurCard.GoodType.Camel && jgs.getMarket().get(gt).getValue() > 0) {
                     actions.add(new TakeCards(ImmutableMap.of(gt, 1), null, currentPlayer));

@@ -9,10 +9,7 @@ import games.jaipurskeleton.JaipurGameState;
 import games.jaipurskeleton.actions.TakeCards;
 import games.jaipurskeleton.components.JaipurCard;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class JaipurMetrics {
     static public class RoundScoreDifference extends AbstractMetric {
@@ -66,9 +63,13 @@ public class JaipurMetrics {
             AbstractAction action = e.action;
             if(action instanceof TakeCards tc) {
                 for(JaipurCard.GoodType type : goodTypes) {
-                    if(tc.howManyPerTypeTakeFromMarket.containsKey(type))
-                        records.put("Purchase-"+type.name(), tc.howManyPerTypeTakeFromMarket.get(type));
+                    if(tc.howManyPerTypeTakeFromMarket.containsKey(type)) {
+                        records.put("Purchase-" + type.name(), tc.howManyPerTypeTakeFromMarket.get(type));
+                        // add another record to column Purchase ( the type of good purchased from the market
+                        records.put("Purchase", type.name());
+                    }
                 }
+
                 return true;
             }
             return false;
@@ -85,11 +86,14 @@ public class JaipurMetrics {
             for(JaipurCard.GoodType type : goodTypes) {
                 columns.put("Purchase-"+type.name(), Integer.class);
             }
+            // add another column ( the type of good purchased from the market
+            columns.put("Purchase", String.class);
             return columns;
         }
     }
 
     // TODO: Exercise - add two more metric classes
+    // new metric 1: if the player going first wins more games?
     static public class WinGamesFirstPlayer extends AbstractMetric {
         public WinGamesFirstPlayer() {
             super();
@@ -97,7 +101,16 @@ public class JaipurMetrics {
 
         @Override
         protected boolean _run(MetricsGameListener listener, Event e, Map<String, Object> records) {
-            return false;
+            JaipurGameState gs = (JaipurGameState) e.state;
+            int winGames = 0;
+            if(gs.getWinners().contains(gs.getFirstPlayer())) winGames += 1;
+            System.out.println("-----------------");
+            System.out.println("Winner: ");
+            System.out.println(gs.getWinners());
+            System.out.println("FirstPlayer: ");
+            System.out.println(gs.getFirstPlayer());
+            records.put("WinGames", winGames);
+            return true;
         }
 
         @Override
@@ -107,7 +120,55 @@ public class JaipurMetrics {
 
         @Override
         public Map<String, Class<?>> getColumns(int nPlayersPerGame, Set<String> playerNames) {
-            return null;
+            Map<String, Class<?>> columns = new HashMap<>();
+            columns.put("WinGames", Integer.class);
+            return columns;
+        }
+    }
+
+    // new metric 2: if the player prefer camels wins more games?
+    static public class WinGamesWithMoreCamels extends  AbstractMetric {
+        public  WinGamesWithMoreCamels() { super(); }
+
+        @Override
+        protected boolean _run(MetricsGameListener listener, Event e, Map<String, Object> records) {
+            JaipurGameState gs = (JaipurGameState) e.state;
+            int winGames = 0;
+            int maxCamels = 0;
+            HashSet<Integer> pIdMaxCamels = new HashSet<>();
+            //System.out.println("----------------------");
+            for (int i = 0; i < gs.getNPlayers(); i++) {
+                int camels = gs.getPlayerHerds().get(i).getValue();
+                //System.out.println("The herds of Player" + Integer.toString(i) + ": "+ Integer.toString(camels) + "camels");
+                if (camels > maxCamels) {
+                    maxCamels = gs.getPlayerHerds().get(i).getValue();
+                    pIdMaxCamels.clear();
+                    pIdMaxCamels.add(i);
+                } else if (gs.getPlayerHerds().get(i).getValue() == maxCamels) {
+                    pIdMaxCamels.add(i);
+                }
+            }
+            if (pIdMaxCamels.size() == 1 && gs.getWinners().contains(pIdMaxCamels.iterator().next())) {
+                winGames += 1;
+            }
+            //System.out.println("Winner: ");
+            //System.out.println(gs.getWinners());
+            //System.out.println("Player with max camels: " + Integer.toString(pIdMaxCamels.iterator().next()));
+
+            records.put("WinGames", winGames);
+            return true;
+        }
+
+        @Override
+        public Set<IGameEvent> getDefaultEventTypes() {
+            return Collections.singleton(Event.GameEvent.ROUND_OVER);
+        }
+
+        @Override
+        public Map<String, Class<?>> getColumns(int nPlayersPerGame, Set<String> playerNames) {
+            Map<String, Class<?>> columns = new HashMap<>();
+            columns.put("WinGames", Integer.class);
+            return columns;
         }
     }
 }

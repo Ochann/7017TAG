@@ -5,13 +5,14 @@ import core.interfaces.IGameEvent;
 import evaluation.listeners.MetricsGameListener;
 import evaluation.metrics.AbstractMetric;
 import evaluation.metrics.Event;
+import evaluation.metrics.IMetricsCollection;
 import games.jaipurskeleton.JaipurGameState;
 import games.jaipurskeleton.actions.TakeCards;
 import games.jaipurskeleton.components.JaipurCard;
 
 import java.util.*;
 
-public class JaipurMetrics {
+public class JaipurMetrics implements IMetricsCollection {
     static public class RoundScoreDifference extends AbstractMetric {
         public RoundScoreDifference() {
             super();

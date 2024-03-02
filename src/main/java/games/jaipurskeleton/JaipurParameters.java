@@ -32,6 +32,7 @@ public class JaipurParameters extends TunableParameters {
         put(JaipurCard.GoodType.Cloth, 1);
         put(JaipurCard.GoodType.Spice, 1);
         put(JaipurCard.GoodType.Leather, 1);
+        put(JaipurCard.GoodType.Magic, 8); // can not sell magic card only
     }};
     Map<Integer, Integer[]> bonusTokensAvailable = new HashMap<Integer, Integer[]>() {{
         put(3, new Integer[]{1,1,2,2,2,3,3});
@@ -64,7 +65,7 @@ public class JaipurParameters extends TunableParameters {
     int nMaximumCamelInGame = 11;
 
     // for customized rules
-    public boolean ifCustomized = true;
+    public boolean ifCustomized = false;
 
     // Copy constructor
     private JaipurParameters(JaipurParameters jaipurParameters) {

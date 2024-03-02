@@ -22,7 +22,7 @@ public class JaipurCard extends Component {
         Spice,
         Leather,
         Camel,
-        AllPurpose
+        Magic
     }
 
     final public GoodType goodType;

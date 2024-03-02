@@ -98,7 +98,7 @@ public class JaipurForwardModel extends StandardForwardModel {
         // new all-purpose cards
         if(jp.ifCustomized) {
             for (int i = 0; i < 5; i++) {  // 5 All-purpose cards
-                JaipurCard card = new JaipurCard(AllPurpose);
+                JaipurCard card = new JaipurCard(Magic);
                 gs.drawDeck.add(card);
             }
         }
@@ -217,14 +217,33 @@ public class JaipurForwardModel extends StandardForwardModel {
         Map<JaipurCard.GoodType, Counter> playerHand = jgs.playerHands.get(currentPlayer);
 
         // Can sell cards from hand
+        // Can sell cards with all-purpose cards
         // TODO: Follow lab 1 instructions (Section 3.1) to fill in this method here.
         for(JaipurCard.GoodType gt: playerHand.keySet()) {
-            if(gt != JaipurCard.GoodType.AllPurpose) {
+            if(jp.ifCustomized) {
+                if (gt != JaipurCard.GoodType.Magic) {
+                    int minimumRequired = jp.getGoodNCardsMinimumSell().get(gt);
+                    int inHand = playerHand.get(gt).getValue();
+                    if(inHand > 0) {
+                        int magicInHand = playerHand.get(JaipurCard.GoodType.Magic).getValue();
+                        int allInHand = inHand + magicInHand;
+                        if (allInHand >= minimumRequired) {
+                            for (int i = minimumRequired; i <= inHand; i++) {
+                                actions.add(new SellCards(gt, i, false, 0));
+                            }
+                            for (int i = 1; i <= magicInHand; i++) {
+                                actions.add(new SellCards(gt, inHand + i, true, i));
+                            }
+                        }
+                    }
+                }
+            }
+            else {
                 int minimumRequired = jp.getGoodNCardsMinimumSell().get(gt);
                 int inHand = playerHand.get(gt).getValue();
                 if (inHand >= minimumRequired) {
                     for (int i = minimumRequired; i <= inHand; i++) {
-                        actions.add(new SellCards(gt, i));
+                        actions.add(new SellCards(gt, i, false, 0));
                     }
                 }
             }

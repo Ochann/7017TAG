@@ -47,7 +47,7 @@ public class JaipurGUIManager extends AbstractGUIManager {
         put(Leather, (new Color(133, 70, 22)));
         put(Camel, new Color(132, 171, 224));
 
-        put(AllPurpose, new Color(10, 220, 220));
+        put(Magic, new Color(10, 220, 220));
     }};
     public static HashMap<JaipurCard.GoodType, Color> soldGoodColorMapping = new HashMap<JaipurCard.GoodType, Color>() {{
         put(Diamonds, (new Color(246, 198, 198)));
@@ -58,7 +58,7 @@ public class JaipurGUIManager extends AbstractGUIManager {
         put(Leather, (new Color(248, 228, 213)));
         put(Camel, new Color(223, 233, 246));
 
-        put(AllPurpose, new Color(10, 220, 220));
+        put(Magic, new Color(10, 220, 220));
     }};
     public static int viewWidth, viewHeight;
     public static int border = 30;

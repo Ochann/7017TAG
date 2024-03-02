@@ -29,10 +29,15 @@ import java.util.Objects;
 public class SellCards extends AbstractAction {
     final JaipurCard.GoodType goodType;
     final int howMany;
+    boolean isCustomized;
 
-    public SellCards(JaipurCard.GoodType goodType, int howMany) {
+    final int magicCards;
+
+    public SellCards(JaipurCard.GoodType goodType, int howMany, boolean isCustomized, int magicCards) {
         this.goodType = goodType;
         this.howMany = howMany;
+        this.isCustomized = isCustomized;
+        this.magicCards = magicCards;
     }
 
     /**
@@ -48,7 +53,11 @@ public class SellCards extends AbstractAction {
 
         // TODO: Follow lab 1 instructions (Section 3.1) to fill in this method here.
         // 1. remove the cards being sold from the player's hand
-        jgs.getPlayerHands().get(currentPlayer).get(goodType).decrement(howMany);
+        if(!isCustomized) jgs.getPlayerHands().get(currentPlayer).get(goodType).decrement(howMany);
+        else {
+            jgs.getPlayerHands().get(currentPlayer).get(goodType).decrement(howMany-magicCards);
+            jgs.getPlayerHands().get(currentPlayer).get(JaipurCard.GoodType.Magic).decrement(magicCards);
+        }
         // 2. give the player good tokens
         Deck<JaipurToken> goodTokens = jgs.getGoodTokens().get(goodType);
         boolean empty = goodTokens.getSize() == 0;
@@ -130,7 +139,8 @@ public class SellCards extends AbstractAction {
 
     @Override
     public String toString() {
-        return "Sell " + howMany + " " + goodType + " cards";
+        if(!isCustomized) return "Sell " + howMany + " " + goodType + " cards";
+        else return "Sell " + (howMany-magicCards) + " " + goodType + " cards" + " + " + magicCards + " Magic cards";
     }
 
     /**

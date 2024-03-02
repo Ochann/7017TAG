@@ -21,7 +21,8 @@ public class JaipurCard extends Component {
         Cloth,
         Spice,
         Leather,
-        Camel
+        Camel,
+        AllPurpose
     }
 
     final public GoodType goodType;

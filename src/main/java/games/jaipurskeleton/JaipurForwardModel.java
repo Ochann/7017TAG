@@ -95,6 +95,13 @@ public class JaipurForwardModel extends StandardForwardModel {
 
         // Create deck of cards
         gs.drawDeck.clear();
+        // new all-purpose cards
+        if(jp.ifCustomized) {
+            for (int i = 0; i < 5; i++) {  // 5 All-purpose cards
+                JaipurCard card = new JaipurCard(AllPurpose);
+                gs.drawDeck.add(card);
+            }
+        }
         for (int i = 0; i < 6; i++) {  // 6 Diamond cards
             JaipurCard card = new JaipurCard(Diamonds);
             gs.drawDeck.add(card);
@@ -212,11 +219,13 @@ public class JaipurForwardModel extends StandardForwardModel {
         // Can sell cards from hand
         // TODO: Follow lab 1 instructions (Section 3.1) to fill in this method here.
         for(JaipurCard.GoodType gt: playerHand.keySet()) {
-            int minimumRequired = jp.getGoodNCardsMinimumSell().get(gt);
-            int inHand = playerHand.get(gt).getValue();
-            if(inHand >= minimumRequired) {
-                for(int i = minimumRequired; i <= inHand; i++ ) {
-                    actions.add(new SellCards(gt, i));
+            if(gt != JaipurCard.GoodType.AllPurpose) {
+                int minimumRequired = jp.getGoodNCardsMinimumSell().get(gt);
+                int inHand = playerHand.get(gt).getValue();
+                if (inHand >= minimumRequired) {
+                    for (int i = minimumRequired; i <= inHand; i++) {
+                        actions.add(new SellCards(gt, i));
+                    }
                 }
             }
         }

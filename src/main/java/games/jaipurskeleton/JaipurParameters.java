@@ -63,6 +63,9 @@ public class JaipurParameters extends TunableParameters {
     int nInitialCamelInMarket = 3;
     int nMaximumCamelInGame = 11;
 
+    // for customized rules
+    public boolean ifCustomized = true;
+
     // Copy constructor
     private JaipurParameters(JaipurParameters jaipurParameters) {
         super();
@@ -84,6 +87,7 @@ public class JaipurParameters extends TunableParameters {
         this.nMaximumCardsInMarket = jaipurParameters.nMaximumCardsInMarket;
         this.nInitialCamelInMarket = jaipurParameters.nInitialCamelInMarket;
         this.nMaximumCamelInGame = jaipurParameters.nMaximumCamelInGame;
+        this.ifCustomized = jaipurParameters.ifCustomized;
 
         // add tunable params
         addTunableParameter("nPointsMostCamels", 5, Arrays.asList(0, 2, 5, 7, 10));
@@ -122,7 +126,7 @@ public class JaipurParameters extends TunableParameters {
         if (this == o) return true;
         if (!(o instanceof JaipurParameters that)) return false;
         if (!super.equals(o)) return false;
-        return nMaximumCamelInGame == that.nMaximumCamelInGame && nInitialCamelInMarket == that.nInitialCamelInMarket && nMaximumCardsInMarket == that.nMaximumCardsInMarket && nInitialCardsInHand == that.nInitialCardsInHand && nPlayerHandLimit == that.nPlayerHandLimit && Objects.equals(goodTokensProgression, that.goodTokensProgression) && nRoundsWinForGameWin == that.nRoundsWinForGameWin && nPointsMostCamels == that.nPointsMostCamels && nGoodTokensEmptyRoundEnd == that.nGoodTokensEmptyRoundEnd && Objects.equals(goodNCardsMinimumSell, that.goodNCardsMinimumSell) && Objects.equals(bonusTokensAvailable, that.bonusTokensAvailable);
+        return ifCustomized == that.ifCustomized && nMaximumCamelInGame == that.nMaximumCamelInGame && nInitialCamelInMarket == that.nInitialCamelInMarket && nMaximumCardsInMarket == that.nMaximumCardsInMarket && nInitialCardsInHand == that.nInitialCardsInHand && nPlayerHandLimit == that.nPlayerHandLimit && Objects.equals(goodTokensProgression, that.goodTokensProgression) && nRoundsWinForGameWin == that.nRoundsWinForGameWin && nPointsMostCamels == that.nPointsMostCamels && nGoodTokensEmptyRoundEnd == that.nGoodTokensEmptyRoundEnd && Objects.equals(goodNCardsMinimumSell, that.goodNCardsMinimumSell) && Objects.equals(bonusTokensAvailable, that.bonusTokensAvailable);
     }
 
     @Override
@@ -134,7 +138,7 @@ public class JaipurParameters extends TunableParameters {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), nMaximumCamelInGame, nInitialCamelInMarket, nMaximumCardsInMarket, nInitialCardsInHand, nPlayerHandLimit, goodTokensProgression, goodNCardsMinimumSell, bonusTokensAvailable, nPointsMostCamels, nGoodTokensEmptyRoundEnd);
+        return Objects.hash(super.hashCode(), ifCustomized, nInitialCamelInMarket, nMaximumCardsInMarket, nInitialCardsInHand, nPlayerHandLimit, goodTokensProgression, goodNCardsMinimumSell, bonusTokensAvailable, nPointsMostCamels, nGoodTokensEmptyRoundEnd);
     }
 
     @Override
@@ -158,6 +162,7 @@ public class JaipurParameters extends TunableParameters {
                 ", nMaximumCardsInMarket=" + nMaximumCardsInMarket +
                 ", nInitialCamelInMarket=" + nInitialCamelInMarket +
                 ", nMaximumCamelInGame=" + nMaximumCamelInGame +
+                ", ifCustomized=" + ifCustomized +
                 '}';
     }
 }

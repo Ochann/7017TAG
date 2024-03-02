@@ -1,0 +1,191 @@
+Game: Jaipur, Players: 2
+Playing Jaipur
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+============= Jaipur - 10 games played ============= 
+MCTSPlayer got 5.00 points. MCTSPlayer won 50.0% of the 10 games of the tournament. MCTSPlayer won 50.0% of the 10 games it played during the tournament.
+MCTSPlayer won 50.0% of the 10 games against MCTSPlayer.
+
+MCTSPlayer got 5.00 points. MCTSPlayer won 50.0% of the 10 games of the tournament. MCTSPlayer won 50.0% of the 10 games it played during the tournament.
+MCTSPlayer won 50.0% of the 10 games against MCTSPlayer.
+
+---- Ranking ---- 
+MCTSPlayer: Win rate 0.50 +/- 0.08	Mean Ordinal 1.50 +/- 0.08
+MCTSPlayer: Win rate 0.50 +/- 0.08	Mean Ordinal 1.50 +/- 0.08
+
+  RoundScoreDifference_ScoreDiff  
+ Measure   |        Value        |
+----------------------------------
+    Count  |                 27  |
+      sum  |                214  |
+     Mean  |  7.925925925925928  |
+      Min  |                  0  |
+      Max  |                 28  |
+    Range  |                 28  |
+ Variance  |  45.45584045584046  |
+ Std. Dev  |  6.742094663814834  |
+
+Plot report to console not implemented yet
+
+PurchaseFromMarket_Purchase-Diamonds
+ Measure   |  Value  |
+----------------------
+    Count  |    117  |
+      sum  |    117  |
+     Mean  |      1  |
+      Min  |      1  |
+      Max  |      1  |
+    Range  |      0  |
+ Variance  |      0  |
+ Std. Dev  |      0  |
+
+
+                                     Summary Purchase                                      
+ Purchase \ Game #  |  1   |  2   |  3   |  4   |  5   |  6   |  7   |  8   |  9   |  10  |
+-------------------------------------------------------------------------------------------
+            Silver  |  15  |  11  |   5  |  12  |  14  |  13  |   8  |  15  |  10  |  11  |
+              Gold  |   9  |  14  |   9  |   5  |   9  |  15  |   9  |  10  |   6  |  14  |
+          Diamonds  |  14  |  14  |   6  |   9  |  10  |   9  |  10  |  14  |  16  |  15  |
+             Cloth  |  12  |  18  |  10  |  10  |  18  |  17  |   9  |  14  |  17  |  18  |
+             Spice  |  15  |  15  |  10  |   9  |  11  |  16  |   8  |  15  |  16  |  24  |
+           Leather  |  21  |  21  |  12  |  12  |  26  |  18  |  15  |  23  |  23  |  12  |
+             Camel  |  10  |  12  |   8  |   4  |   7  |  13  |   6  |  15  |  12  |  12  |
+
+                                                       Stats Purchase                                                        
+ Measure   |  Count  |  sum  |         Mean         |  Min  |  Max  |  Range  |       Variance       |       Std. Dev       |
+-----------------------------------------------------------------------------------------------------------------------------
+  Leather  |     10  |  183  |                18.3  |   12  |   26  |     14  |  27.566666666666663  |   5.250396810400778  |
+    Cloth  |     10  |  143  |                14.3  |    9  |   18  |      9  |  14.011111111111113  |  3.7431418769679454  |
+    Spice  |     10  |  139  |                13.9  |    8  |   24  |     16  |   21.87777777777778  |   4.677368680976279  |
+ Diamonds  |     10  |  117  |  11.700000000000001  |    6  |   16  |     10  |  10.899999999999999  |  3.3015148038438356  |
+   Silver  |     10  |  114  |  11.400000000000002  |    5  |   15  |     10  |  10.044444444444444  |  3.1692971530679235  |
+     Gold  |     10  |  100  |                  10  |    5  |   15  |     10  |  11.333333333333334  |   3.366501646120693  |
+    Camel  |     10  |   99  |   9.899999999999999  |    4  |   15  |     11  |  12.322222222222223  |  3.5103022978402048  |
+
+
+PurchaseFromMarket_Purchase-Cloth
+ Measure   |  Value  |
+----------------------
+    Count  |    143  |
+      sum  |    143  |
+     Mean  |      1  |
+      Min  |      1  |
+      Max  |      1  |
+    Range  |      0  |
+ Variance  |      0  |
+ Std. Dev  |      0  |
+
+
+PurchaseFromMarket_Purchase-Silver
+ Measure   |  Value  |
+----------------------
+    Count  |    114  |
+      sum  |    114  |
+     Mean  |      1  |
+      Min  |      1  |
+      Max  |      1  |
+    Range  |      0  |
+ Variance  |      0  |
+ Std. Dev  |      0  |
+
+
+PurchaseFromMarket_Purchase-Spice
+ Measure   |  Value  |
+----------------------
+    Count  |    139  |
+      sum  |    139  |
+     Mean  |      1  |
+      Min  |      1  |
+      Max  |      1  |
+    Range  |      0  |
+ Variance  |      0  |
+ Std. Dev  |      0  |
+
+
+PurchaseFromMarket_Purchase-Leather
+ Measure   |  Value  |
+----------------------
+    Count  |    183  |
+      sum  |    183  |
+     Mean  |      1  |
+      Min  |      1  |
+      Max  |      1  |
+    Range  |      0  |
+ Variance  |      0  |
+ Std. Dev  |      0  |
+
+
+ PurchaseFromMarket_Purchase-Camel 
+ Measure   |        Value         |
+-----------------------------------
+    Count  |                  99  |
+      sum  |                 239  |
+     Mean  |  2.4141414141414135  |
+      Min  |                   1  |
+      Max  |                   5  |
+    Range  |                   4  |
+ Variance  |   2.183879612451041  |
+ Std. Dev  |  1.4777955245740328  |
+
+
+PurchaseFromMarket_Purchase-Gold
+ Measure   |  Value  |
+----------------------
+    Count  |    100  |
+      sum  |    100  |
+     Mean  |      1  |
+      Min  |      1  |
+      Max  |      1  |
+    Range  |      0  |
+ Variance  |      0  |
+ Std. Dev  |      0  |
+
+Plot report to console not implemented yet
+
+    WinGamesFirstPlayer_WinGames    
+ Measure   |         Value         |
+------------------------------------
+    Count  |                   10  |
+      sum  |                    7  |
+     Mean  |                  0.7  |
+      Min  |                    0  |
+      Max  |                    1  |
+    Range  |                    1  |
+ Variance  |  0.23333333333333334  |
+ Std. Dev  |  0.48304589153964794  |
+
+Plot report to console not implemented yet
+
+  WinRoundsWithMoreCamels_winRound  
+ Measure   |         Value         |
+------------------------------------
+    Count  |                   27  |
+      sum  |                   14  |
+     Mean  |   0.5185185185185185  |
+      Min  |                    0  |
+      Max  |                    1  |
+    Range  |                    1  |
+ Variance  |  0.25925925925925924  |
+ Std. Dev  |   0.5091750772173156  |
+
+Plot report to console not implemented yet
+
+Process finished with exit code 0

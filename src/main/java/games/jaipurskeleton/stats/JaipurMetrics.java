@@ -105,10 +105,10 @@ public class JaipurMetrics implements IMetricsCollection {
             JaipurGameState gs = (JaipurGameState) e.state;
             int winGames = 0;
             if(gs.getWinners().contains(gs.getFirstPlayer())) winGames += 1;
-            System.out.println("Winner: ");
-            System.out.println(gs.getWinners());
-            System.out.println("FirstPlayer: ");
-            System.out.println(gs.getFirstPlayer());
+            //System.out.println("Winner: ");
+            //System.out.println(gs.getWinners());
+            //System.out.println("FirstPlayer: ");
+            //System.out.println(gs.getFirstPlayer());
             records.put("WinGames", winGames);
             return true;
         }
@@ -126,17 +126,17 @@ public class JaipurMetrics implements IMetricsCollection {
         }
     }
 
-    // new metric 2: if the player prefer camels wins more games?
-    static public class WinGamesWithMoreCamels extends  AbstractMetric {
-        public  WinGamesWithMoreCamels() { super(); }
+    // new metric 2: if the player prefer camels wins more rounds?
+    static public class WinRoundsWithMoreCamels extends  AbstractMetric {
+        public  WinRoundsWithMoreCamels() { super(); }
 
         @Override
         protected boolean _run(MetricsGameListener listener, Event e, Map<String, Object> records) {
             JaipurGameState gs = (JaipurGameState) e.state;
-            int winGames = 0;
+            int winRound = 0;
             int maxCamels = 0;
+            int roundWinner = 0;
             HashSet<Integer> pIdMaxCamels = new HashSet<>();
-            //System.out.println("----------------------");
             for (int i = 0; i < gs.getNPlayers(); i++) {
                 int camels = gs.getPlayerHerds().get(i).getValue();
                 //System.out.println("The herds of Player" + Integer.toString(i) + ": "+ Integer.toString(camels) + "camels");
@@ -147,14 +147,22 @@ public class JaipurMetrics implements IMetricsCollection {
                 } else if (gs.getPlayerHerds().get(i).getValue() == maxCamels) {
                     pIdMaxCamels.add(i);
                 }
+                if(gs.getOrdinalPosition(i) == 1) roundWinner = i;
             }
-            if (pIdMaxCamels.size() == 1 && gs.getWinners().contains(pIdMaxCamels.iterator().next())) {
-                winGames += 1;
+            //if (pIdMaxCamels.size() == 1 && gs.getWinners().contains(pIdMaxCamels.iterator().next())) {
+            //    winRound += 1;
+            //}
+            if (pIdMaxCamels.size() == 1 && roundWinner == pIdMaxCamels.iterator().next()) {
+                winRound += 1;
             }
-            //System.out.println("Winner: ");
-            //System.out.println(gs.getWinners());
             //System.out.println("Player with max camels: " + Integer.toString(pIdMaxCamels.iterator().next()));
-            records.put("WinGames", winGames);
+            //System.out.println("Player 0 ordinal pos: " + Integer.toString(gs.getOrdinalPosition(0)));
+            //System.out.println("Player 1 ordinal pos: " + Integer.toString(gs.getOrdinalPosition(1)));
+            //System.out.println("Round Winner: " + Integer.toString(roundWinner));
+            //System.out.println("If player with more camels win this round: " + Integer.toString(winRound));
+            //System.out.println("--------------------------------------------");
+
+            records.put("winRound", winRound);
             return true;
         }
 
@@ -166,7 +174,7 @@ public class JaipurMetrics implements IMetricsCollection {
         @Override
         public Map<String, Class<?>> getColumns(int nPlayersPerGame, Set<String> playerNames) {
             Map<String, Class<?>> columns = new HashMap<>();
-            columns.put("WinGames", Integer.class);
+            columns.put("winRound", Integer.class);
             return columns;
         }
     }

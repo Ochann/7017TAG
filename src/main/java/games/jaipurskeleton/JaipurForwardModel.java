@@ -97,7 +97,7 @@ public class JaipurForwardModel extends StandardForwardModel {
         gs.drawDeck.clear();
         // new all-purpose cards
         if(jp.ifCustomized) {
-            for (int i = 0; i < 5; i++) {  // 5 All-purpose cards
+            for (int i = 0; i < 6; i++) {  // 6 All-purpose cards
                 JaipurCard card = new JaipurCard(Magic);
                 gs.drawDeck.add(card);
             }

@@ -1,0 +1,368 @@
+Game: Jaipur, Players: 2
+Playing Jaipur
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[WIN_GAME,LOSE_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+[MCTSPlayer,MCTSPlayer]
+[LOSE_GAME,WIN_GAME]
+============= Jaipur - 100 games played ============= 
+MCTSPlayer got 49.00 points. MCTSPlayer won 49.0% of the 100 games of the tournament. MCTSPlayer won 49.0% of the 100 games it played during the tournament.
+MCTSPlayer won 49.0% of the 100 games against MCTSPlayer.
+
+MCTSPlayer got 51.00 points. MCTSPlayer won 51.0% of the 100 games of the tournament. MCTSPlayer won 51.0% of the 100 games it played during the tournament.
+MCTSPlayer won 51.0% of the 100 games against MCTSPlayer.
+
+---- Ranking ---- 
+MCTSPlayer: Win rate 0.51 +/- 0.02	Mean Ordinal 1.49 +/- 0.02
+MCTSPlayer: Win rate 0.49 +/- 0.02	Mean Ordinal 1.51 +/- 0.02
+
+  RoundScoreDifference_ScoreDiff   
+ Measure   |        Value         |
+-----------------------------------
+    Count  |                 275  |
+      sum  |                2600  |
+     Mean  |   9.454545454545455  |
+      Min  |                   0  |
+      Max  |                  38  |
+    Range  |                  38  |
+ Variance  |  62.066357000663565  |
+ Std. Dev  |   7.878220420923977  |
+
+Plot report to console not implemented yet
+
+PurchaseFromMarket_Purchase-Diamonds
+ Measure   |  Value  |
+----------------------
+    Count  |   1163  |
+      sum  |   1163  |
+     Mean  |      1  |
+      Min  |      1  |
+      Max  |      1  |
+    Range  |      0  |
+ Variance  |      0  |
+ Std. Dev  |      0  |                                                                                                                                                                                                                                                                                                                                                                Summary Purchase                                                                                                                                                                                                                                                                                                                                                                 
+ Purchase \ Game #  |  1   |  2   |  3   |  4   |  5   |  6   |  7   |  8   |  9   |  10  |  11  |  12  |  13  |  14  |  15  |  16  |  17  |  18  |  19  |  20  |  21  |  22  |  23  |  24  |  25  |  26  |  27  |  28  |  29  |  30  |  31  |  32  |  33  |  34  |  35  |  36  |  37  |  38  |  39  |  40  |  41  |  42  |  43  |  44  |  45  |  46  |  47  |  48  |  49  |  50  |  51  |  52  |  53  |  54  |  55  |  56  |  57  |  58  |  59  |  60  |  61  |  62  |  63  |  64  |  65  |  66  |  67  |  68  |  69  |  70  |  71  |  72  |  73  |  74  |  75  |  76  |  77  |  78  |  79  |  80  |  81  |  82  |  83  |  84  |  85  |  86  |  87  |  88  |  89  |  90  |  91  |  92  |  93  |  94  |  95  |  96  |  97  |  98  |  99  |  100  |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            Silver  |  12  |  18  |  10  |  11  |  18  |  12  |   5  |  10  |  16  |  15  |   9  |  13  |  10  |  11  |  11  |  15  |   6  |  15  |  12  |  10  |  13  |  14  |  11  |  11  |  13  |  15  |   9  |  13  |  12  |  13  |  12  |  15  |  14  |  10  |  10  |   4  |  10  |   8  |  15  |  12  |   9  |  11  |  11  |  12  |  10  |  10  |  15  |   8  |  12  |   9  |  15  |   9  |  10  |   8  |   4  |   7  |   4  |   9  |  12  |  12  |  10  |  11  |  12  |  10  |  10  |  14  |  12  |  12  |  10  |   8  |  14  |  15  |  10  |  12  |  17  |   6  |  11  |  10  |  12  |  17  |  15  |  12  |  18  |   7  |  10  |   8  |   7  |  14  |  13  |   7  |  12  |   9  |   9  |  16  |  12  |   9  |   8  |   8  |  17  |   15  |
+              Gold  |  12  |  15  |  11  |  18  |  18  |   9  |   7  |  11  |  12  |  12  |  12  |  16  |  10  |  15  |   9  |  12  |  18  |   8  |  15  |  10  |  13  |  15  |  11  |  13  |  14  |   6  |  12  |   6  |  10  |  10  |  14  |  17  |   7  |  12  |  11  |  10  |  18  |  10  |  16  |  12  |  13  |   7  |  10  |  14  |  15  |   7  |   9  |   6  |  15  |  13  |  14  |   7  |   8  |  12  |  15  |  14  |  13  |  17  |   9  |  17  |  12  |   7  |   8  |  18  |  15  |  12  |   9  |   8  |  15  |   9  |  14  |  16  |   6  |  18  |  11  |  10  |   8  |  13  |   9  |  17  |  15  |   5  |  12  |  15  |   6  |   9  |  10  |  11  |  12  |  12  |  10  |   6  |  14  |  18  |  15  |  15  |  15  |   6  |   9  |   18  |
+          Diamonds  |  17  |   8  |  11  |  10  |   6  |  13  |  10  |   3  |  16  |  16  |   9  |  13  |   8  |  12  |  12  |  13  |  14  |  15  |  15  |   3  |  10  |  14  |  11  |  12  |   9  |  15  |  17  |  10  |   5  |   9  |  16  |  14  |  12  |   6  |  15  |  12  |  16  |  10  |  13  |  16  |  11  |  10  |  10  |  15  |  10  |  12  |  11  |   9  |  12  |  15  |   7  |  10  |  10  |  10  |  13  |  13  |  14  |  14  |  15  |  15  |  14  |  14  |   6  |  17  |  14  |  13  |  14  |   7  |   9  |   6  |  13  |   9  |   4  |  14  |  12  |  10  |   6  |  12  |  12  |  15  |  18  |   8  |  12  |  16  |   7  |   6  |   7  |  12  |  15  |   8  |  16  |  10  |  14  |   9  |  17  |  17  |  15  |   7  |  15  |   11  |
+             Spice  |  15  |  17  |  16  |  17  |  17  |  19  |   7  |   9  |  12  |  12  |  19  |  17  |  14  |  13  |  21  |  16  |  16  |  22  |  11  |   7  |  18  |  19  |  10  |  16  |  16  |  17  |  19  |  12  |   8  |  17  |  16  |  18  |  15  |   8  |  23  |  12  |   6  |  14  |  21  |   9  |  21  |  15  |  11  |  17  |  14  |  12  |  18  |  10  |  12  |  16  |  16  |  10  |   4  |   5  |  13  |  20  |  16  |  11  |  16  |  14  |  19  |  16  |  12  |  15  |  13  |  21  |  16  |   7  |  10  |   9  |  15  |  14  |   8  |  10  |  17  |  13  |  13  |  19  |  15  |  14  |  11  |  15  |  15  |  13  |  12  |  12  |   8  |  15  |  11  |  24  |  18  |   8  |  21  |  12  |  15  |  20  |  13  |  15  |  17  |    9  |
+             Cloth  |  11  |  12  |  19  |  15  |  16  |  12  |  11  |  11  |  14  |  12  |  16  |  18  |  10  |  21  |  14  |  14  |  19  |  21  |  19  |  11  |  15  |  12  |  14  |  20  |  16  |  13  |  17  |  14  |  10  |  18  |  21  |  11  |  18  |  13  |  19  |  19  |  17  |  12  |  12  |  18  |  16  |  12  |   7  |  14  |  19  |  11  |  15  |  15  |  15  |  21  |  16  |  12  |  11  |  12  |  19  |  10  |  21  |  18  |  16  |  15  |  20  |  19  |  14  |  21  |  16  |  19  |  16  |  14  |  22  |  12  |  11  |  15  |  11  |  20  |  20  |  10  |  15  |  22  |  15  |  13  |  16  |   9  |  17  |  15  |   6  |   9  |  12  |  10  |  17  |  15  |  18  |   9  |  15  |  23  |  17  |  18  |  19  |  12  |  17  |   21  |
+           Leather  |  18  |  22  |  20  |  22  |  20  |  22  |  13  |  13  |  26  |  20  |  11  |  20  |  13  |  18  |  19  |  17  |  20  |  18  |  21  |  15  |  19  |  17  |  29  |  16  |  14  |  21  |  19  |  25  |  13  |  21  |  11  |  17  |  15  |   8  |  10  |  18  |  24  |  10  |  13  |  19  |  16  |  24  |  12  |  14  |  22  |  11  |  20  |   8  |  18  |  19  |  17  |  14  |  16  |  13  |  14  |  19  |  15  |  20  |  18  |  19  |  15  |  21  |  11  |  13  |  21  |  17  |  24  |  18  |  20  |  12  |  17  |  17  |  16  |  16  |  20  |   9  |   4  |  20  |  22  |  20  |  20  |  12  |  19  |  21  |  15  |  14  |  10  |  19  |  24  |  19  |  19  |  14  |  17  |  18  |  21  |  18  |  19  |  11  |  15  |   16  |
+             Camel  |  10  |  11  |   9  |  16  |  14  |  16  |  11  |   6  |   7  |  11  |  12  |   8  |   7  |  12  |   8  |  11  |   8  |   8  |   9  |   6  |  12  |  13  |  12  |  15  |  12  |   8  |  11  |  14  |   8  |   8  |  10  |  12  |  10  |   8  |   9  |  15  |  10  |   7  |  14  |   8  |   7  |  14  |   9  |  17  |  12  |   6  |  10  |   5  |   9  |  10  |  11  |   5  |  10  |  12  |  13  |  10  |  10  |  15  |   9  |   8  |  12  |   8  |   6  |  12  |  10  |   6  |   8  |   6  |   9  |   8  |  16  |  11  |   8  |  13  |  11  |   8  |   8  |  10  |   8  |  10  |  13  |   7  |  10  |  10  |   7  |   6  |   6  |   8  |  10  |  11  |  11  |  10  |  14  |   9  |  10  |  10  |  10  |   6  |  10  |   12  |
+
+                                                        Stats Purchase                                                        
+ Measure   |  Count  |  sum   |         Mean         |  Min  |  Max  |  Range  |       Variance       |       Std. Dev       |
+------------------------------------------------------------------------------------------------------------------------------
+  Leather  |    100  |  1710  |  17.099999999999994  |    4  |   29  |     25  |   18.97979797979798  |   4.356580996584131  |
+    Cloth  |    100  |  1520  |  15.200000000000003  |    6  |   23  |     17  |  14.303030303030301  |   3.781934730138835  |
+    Spice  |    100  |  1422  |  14.219999999999999  |    4  |   24  |     20  |  17.728888888888886  |  4.2105687132368335  |
+     Gold  |    100  |  1190  |  11.899999999999995  |    5  |   18  |     13  |   12.65656565656565  |  3.5576067315775153  |
+ Diamonds  |    100  |  1163  |  11.629999999999999  |    3  |   18  |     15  |  12.316262626262633  |  3.5094533229924334  |
+   Silver  |    100  |  1129  |  11.289999999999997  |    4  |   18  |     14  |   9.824141414141415  |  3.1343486427233036  |
+    Camel  |    100  |   996  |                9.96  |    5  |   17  |     12  |   7.372121212121214  |   2.715165043256342  |
+
+
+PurchaseFromMarket_Purchase-Cloth
+ Measure   |  Value  |
+----------------------
+    Count  |   1520  |
+      sum  |   1520  |
+     Mean  |      1  |
+      Min  |      1  |
+      Max  |      1  |
+    Range  |      0  |
+ Variance  |      0  |
+ Std. Dev  |      0  |
+
+
+PurchaseFromMarket_Purchase-Silver
+ Measure   |  Value  |
+----------------------
+    Count  |   1129  |
+      sum  |   1129  |
+     Mean  |      1  |
+      Min  |      1  |
+      Max  |      1  |
+    Range  |      0  |
+ Variance  |      0  |
+ Std. Dev  |      0  |
+
+
+PurchaseFromMarket_Purchase-Spice
+ Measure   |  Value  |
+----------------------
+    Count  |   1422  |
+      sum  |   1422  |
+     Mean  |      1  |
+      Min  |      1  |
+      Max  |      1  |
+    Range  |      0  |
+ Variance  |      0  |
+ Std. Dev  |      0  |
+
+
+PurchaseFromMarket_Purchase-Leather
+ Measure   |  Value  |
+----------------------
+    Count  |   1710  |
+      sum  |   1710  |
+     Mean  |      1  |
+      Min  |      1  |
+      Max  |      1  |
+    Range  |      0  |
+ Variance  |      0  |
+ Std. Dev  |      0  |
+
+
+ PurchaseFromMarket_Purchase-Camel 
+ Measure   |        Value         |
+-----------------------------------
+    Count  |                 996  |
+      sum  |                2393  |
+     Mean  |  2.4026104417670666  |
+      Min  |                   1  |
+      Max  |                   5  |
+    Range  |                   4  |
+ Variance  |  2.1844755908054334  |
+ Std. Dev  |  1.4779971552088431  |
+
+
+PurchaseFromMarket_Purchase-Gold
+ Measure   |  Value  |
+----------------------
+    Count  |   1190  |
+      sum  |   1190  |
+     Mean  |      1  |
+      Min  |      1  |
+      Max  |      1  |
+    Range  |      0  |
+ Variance  |      0  |
+ Std. Dev  |      0  |
+
+Plot report to console not implemented yet
+
+    WinGamesFirstPlayer_WinGames    
+ Measure   |         Value         |
+------------------------------------
+    Count  |                  100  |
+      sum  |                   50  |
+     Mean  |                  0.5  |
+      Min  |                    0  |
+      Max  |                    1  |
+    Range  |                    1  |
+ Variance  |  0.25252525252525254  |
+ Std. Dev  |    0.502518907629606  |
+
+Plot report to console not implemented yet
+
+  WinRoundsWithMoreCamels_winRound  
+ Measure   |         Value         |
+------------------------------------
+    Count  |                  275  |
+      sum  |                  124  |
+     Mean  |    0.450909090909091  |
+      Min  |                    0  |
+      Max  |                    1  |
+    Range  |                    1  |
+ Variance  |  0.24849369608493688  |
+ Std. Dev  |  0.49849142027214155  |
+
+Plot report to console not implemented yet
+
+Process finished with exit code 0

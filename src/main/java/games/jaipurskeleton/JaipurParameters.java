@@ -72,12 +72,12 @@ public class JaipurParameters extends TunableParameters {
             addTunableParameter(gt.name() + "minSell", goodNCardsMinimumSell.get(gt), Arrays.asList(1, 2, 3, 4, 5));
         }
         // TODO: add the rest of params as tunable params(ignore goodTokensProgression and bonusTokensAvailable
-        addTunableParameter("nGoodTokensEmptyRoundEnd", nGoodTokensEmptyRoundEnd, Arrays.asList(2, 3, 4, 5));
+        addTunableParameter("nGoodTokensEmptyRoundEnd", nGoodTokensEmptyRoundEnd, Arrays.asList(2, 3, 4));
         addTunableParameter("nRoundsWinForGameWin", nRoundsWinForGameWin, Arrays.asList(2, 3));
         addTunableParameter("nPlayerHandLimit", nPlayerHandLimit, Arrays.asList(6, 7, 8, 9, 10));
-        addTunableParameter("nInitialCardsInHand", nInitialCardsInHand, Arrays.asList(4, 5, 6));
+        addTunableParameter("nInitialCardsInHand", nInitialCardsInHand, Arrays.asList(4, 5, 6)); // always less than nPlayerHandLimit
         addTunableParameter("nMaximumCardsInMarket", nMaximumCardsInMarket, Arrays.asList(5, 6, 7, 8));
-        addTunableParameter("nInitialCamelInMarket", nInitialCamelInMarket, Arrays.asList(2, 3, 4, 5));
+        addTunableParameter("nInitialCamelInMarket", nInitialCamelInMarket, Arrays.asList(2, 3, 4, 5)); // always less than nMaximumCardsInMarket
         addTunableParameter("nMaximumCamelInGame", nMaximumCamelInGame, Arrays.asList(10, 11, 12, 13, 14));
         addTunableParameter("ifCustomized", ifCustomized, Arrays.asList(true, false));
     }
@@ -154,7 +154,7 @@ public class JaipurParameters extends TunableParameters {
 
     @Override
     public void _reset() {
-        System.out.println("------------reset jaipurparams");
+        //System.out.println("------------reset jaipurparams");
         nPointsMostCamels = (int) getParameterValue("nPointsMostCamels");
         goodNCardsMinimumSell.replaceAll((gt, v)->(Integer) getParameterValue(gt.name() + "minSell"));
         // TODO: add the rest of params as tunable params(ignore goodTokensProgression and bonusTokensAvailable

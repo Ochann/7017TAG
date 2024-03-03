@@ -159,7 +159,7 @@ public class JaipurForwardModel extends StandardForwardModel {
         }
 
         // Take first 2 cards from the deck and place them face up in the market.
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < jp.nMaximumCardsInMarket-jp.nInitialCamelInMarket; i++) {
             JaipurCard card = gs.drawDeck.draw();
             gs.market.get(card.goodType).increment();
         }
@@ -216,6 +216,8 @@ public class JaipurForwardModel extends StandardForwardModel {
         int currentPlayer = gameState.getCurrentPlayer();
         Map<JaipurCard.GoodType, Counter> playerHand = jgs.playerHands.get(currentPlayer);
 
+        System.out.println("-------------------------------");
+
         // Can sell cards from hand
         // Can sell cards with all-purpose cards
         // TODO: Follow lab 1 instructions (Section 3.1) to fill in this method here.
@@ -256,8 +258,10 @@ public class JaipurForwardModel extends StandardForwardModel {
         // TODO 1:construct one TakeCards action object and add it to the `actions` ArrayList. (The `howManyPerTypeGiveFromHand` argument should be null)
         if(jgs.getMarket().containsKey(JaipurCard.GoodType.Camel)) {
             int camelNum = jgs.getMarket().get(JaipurCard.GoodType.Camel).getValue();
+            System.out.println("Camel num: " + camelNum);
             if (camelNum > 0) {
                 actions.add(new TakeCards(ImmutableMap.of(JaipurCard.GoodType.Camel, camelNum), null, currentPlayer));
+                System.out.println("Added take camel actions");
             }
         }
 
@@ -265,15 +269,19 @@ public class JaipurForwardModel extends StandardForwardModel {
         for (JaipurCard.GoodType gt: playerHand.keySet()) {
             nCardsInHand += playerHand.get(gt).getValue();
         }
+        System.out.println("Player hand: " + nCardsInHand);
+        System.out.println("Player hand limit: " + jp.nPlayerHandLimit);
 
         // Check hand limit for taking non-camel cards in hand
         if (nCardsInHand < jp.nPlayerHandLimit) {
             // Option B: Take a single (non-camel) card from the market
             // TODO 2: For each good type in the market, if there is at least 1 of that type (which is not a Camel),
             // TODO 2: construct one TakeCards action object to take 1 of that type from the market, and add it to the `actions` ArrayList. (The `howManyPerTypeGiveFromHand` argument should be null)
+            System.out.println("Take non-camel card...");
             for(JaipurCard.GoodType gt: jgs.getMarket().keySet()) {
                 if(gt != JaipurCard.GoodType.Camel && jgs.getMarket().get(gt).getValue() > 0) {
                     actions.add(new TakeCards(ImmutableMap.of(gt, 1), null, currentPlayer));
+                    System.out.println("Added take card action: " + gt);
                 }
             }
         }

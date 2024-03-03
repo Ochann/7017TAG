@@ -251,6 +251,7 @@ public abstract class TunableParameters extends AbstractParameters implements IT
      */
     @Override
     public void setParameterValue(String parameterName, Object value) {
+        System.out.println("------------set param values");
         if (parameterName.split(Pattern.quote(".")).length > 1) {
             // in this case we pass on to the subParam (as well as updating here)
             String[] split = parameterName.split(Pattern.quote("."));
@@ -274,6 +275,7 @@ public abstract class TunableParameters extends AbstractParameters implements IT
         // Then, if value is TunableParameter itself, we 'lift' its attributes up to the top level
         // and remove any previous ones
         if (value instanceof TunableParameters) {
+            System.out.println("------------lift");
             TunableParameters subParams = (TunableParameters) value;
             List<String> oldParamNames = parameterNames.stream().filter(n -> n.startsWith(parameterName + ".")).collect(toList());
             // we now remove these

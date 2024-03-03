@@ -43,9 +43,6 @@ public class JaipurParameters extends TunableParameters {
     int nPointsMostCamels = 5;
     int nGoodTokensEmptyRoundEnd = 3;
 
-    public JaipurParameters() {
-        super();
-    }
 
     // for new parameters
     int nRoundsWinForGameWin = 2;
@@ -65,11 +62,31 @@ public class JaipurParameters extends TunableParameters {
     int nMaximumCamelInGame = 11;
 
     // for customized rules
-    public boolean ifCustomized = false;
+    boolean ifCustomized = true;
+
+    public JaipurParameters() {
+        super();
+        // add tunable params
+        addTunableParameter("nPointsMostCamels", nPointsMostCamels, Arrays.asList(0, 2, 5, 7, 10));
+        for(JaipurCard.GoodType gt: goodNCardsMinimumSell.keySet()) {
+            addTunableParameter(gt.name() + "minSell", goodNCardsMinimumSell.get(gt), Arrays.asList(1, 2, 3, 4, 5));
+        }
+        // TODO: add the rest of params as tunable params(ignore goodTokensProgression and bonusTokensAvailable
+        addTunableParameter("nGoodTokensEmptyRoundEnd", nGoodTokensEmptyRoundEnd, Arrays.asList(2, 3, 4, 5));
+        addTunableParameter("nRoundsWinForGameWin", nRoundsWinForGameWin, Arrays.asList(2, 3));
+        addTunableParameter("nPlayerHandLimit", nPlayerHandLimit, Arrays.asList(6, 7, 8, 9, 10));
+        addTunableParameter("nInitialCardsInHand", nInitialCardsInHand, Arrays.asList(4, 5, 6));
+        addTunableParameter("nMaximumCardsInMarket", nMaximumCardsInMarket, Arrays.asList(5, 6, 7, 8));
+        addTunableParameter("nInitialCamelInMarket", nInitialCamelInMarket, Arrays.asList(2, 3, 4, 5));
+        addTunableParameter("nMaximumCamelInGame", nMaximumCamelInGame, Arrays.asList(10, 11, 12, 13, 14));
+        addTunableParameter("ifCustomized", ifCustomized, Arrays.asList(true, false));
+    }
+
 
     // Copy constructor
     private JaipurParameters(JaipurParameters jaipurParameters) {
         super();
+
         this.goodNCardsMinimumSell = new HashMap<>(jaipurParameters.getGoodNCardsMinimumSell());
         this.bonusTokensAvailable = new HashMap<>();
         for (int n: jaipurParameters.getBonusTokensAvailable().keySet()) {
@@ -83,20 +100,12 @@ public class JaipurParameters extends TunableParameters {
         for (JaipurCard.GoodType gt : jaipurParameters.getGoodTokensProgression().keySet()){
             this.goodTokensProgression.put(gt, jaipurParameters.getGoodTokensProgression().get(gt).clone());
         }
-        this.nPlayerHandLimit = jaipurParameters.nPlayerHandLimit;
-        this.nInitialCardsInHand = jaipurParameters.nInitialCardsInHand;
-        this.nMaximumCardsInMarket = jaipurParameters.nMaximumCardsInMarket;
-        this.nInitialCamelInMarket = jaipurParameters.nInitialCamelInMarket;
-        this.nMaximumCamelInGame = jaipurParameters.nMaximumCamelInGame;
-        this.ifCustomized = jaipurParameters.ifCustomized;
-
-        // add tunable params
-        addTunableParameter("nPointsMostCamels", 5, Arrays.asList(0, 2, 5, 7, 10));
-        for(JaipurCard.GoodType gt: goodNCardsMinimumSell.keySet()) {
-            addTunableParameter(gt.name() + "minSell", goodNCardsMinimumSell.get(gt), Arrays.asList(1, 2, 3, 4, 5));
-        }
-        // TODO: add the rest of params as tunable params(ignore goodTokensProgression and bonusTokensAvailable
-        addTunableParameter("nGoodTokensEmptyRoundEnd", 3, Arrays.asList(2, 3, 4, 5));
+        this.nPlayerHandLimit = jaipurParameters.getNPlayerHandLimit();
+        this.nInitialCardsInHand = jaipurParameters.getNInitialCardsInHand();
+        this.nMaximumCardsInMarket = jaipurParameters.getNMaximumCardsInMarket();
+        this.nInitialCamelInMarket = jaipurParameters.getNInitialCamelInMarket();
+        this.nMaximumCamelInGame = jaipurParameters.getNMaximumCamelInGame();
+        this.ifCustomized = jaipurParameters.getIfCustomized();
     }
 
     public Map<JaipurCard.GoodType, Integer> getGoodNCardsMinimumSell() {
@@ -117,6 +126,19 @@ public class JaipurParameters extends TunableParameters {
     public int getNRoundsWinForGameWin() { return nRoundsWinForGameWin; }
     public Map<JaipurCard.GoodType, Integer[]> getGoodTokensProgression() { return goodTokensProgression; }
 
+    public int getNPlayerHandLimit() { return nPlayerHandLimit; }
+
+    public int getNInitialCardsInHand() { return nInitialCardsInHand; }
+
+    public int getNMaximumCardsInMarket() { return nMaximumCardsInMarket; }
+
+    public int getNInitialCamelInMarket() { return nInitialCamelInMarket; }
+
+    public int getNMaximumCamelInGame() { return nMaximumCamelInGame; }
+
+    public boolean getIfCustomized() { return ifCustomized; }
+
+
     @Override
     protected AbstractParameters _copy() {
         return new JaipurParameters(this);
@@ -132,9 +154,18 @@ public class JaipurParameters extends TunableParameters {
 
     @Override
     public void _reset() {
+        System.out.println("------------reset jaipurparams");
         nPointsMostCamels = (int) getParameterValue("nPointsMostCamels");
         goodNCardsMinimumSell.replaceAll((gt, v)->(Integer) getParameterValue(gt.name() + "minSell"));
         // TODO: add the rest of params as tunable params(ignore goodTokensProgression and bonusTokensAvailable
+        nGoodTokensEmptyRoundEnd = (int) getParameterValue("nGoodTokensEmptyRoundEnd");
+        nRoundsWinForGameWin = (int) getParameterValue("nRoundsWinForGameWin");
+        nPlayerHandLimit = (int) getParameterValue("nPlayerHandLimit");
+        nInitialCardsInHand = (int) getParameterValue("nInitialCardsInHand");
+        nMaximumCardsInMarket = (int) getParameterValue("nMaximumCardsInMarket");
+        nInitialCamelInMarket = (int) getParameterValue("nInitialCamelInMarket");
+        nMaximumCamelInGame = (int) getParameterValue("nMaximumCamelInGame");
+        ifCustomized = (boolean) getParameterValue("ifCustomized");
     }
 
     @Override

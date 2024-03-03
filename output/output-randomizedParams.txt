@@ -1,2 +1,220 @@
-Parameters: JaipurParameters{goodNCardsMinimumSell={Diamonds=1, Leather=1, Cloth=4, Silver=2, Magic=4, Gold=1, Spice=3}, bonusTokensAvailable={3=[Ljava.lang.Integer;@4f970963, 4=[Ljava.lang.Integer;@61f8bee4, 5=[Ljava.lang.Integer;@7b49cea0}, nPointsMostCamels=5, nGoodTokensEmptyRoundEnd=3, nRoundsWinForGameWin=3, goodTokensProgression={Diamonds=[Ljava.lang.Integer;@887af79, Leather=[Ljava.lang.Integer;@7fac631b, Cloth=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Gold=[Ljava.lang.Integer;@5bc79255, Spice=[Ljava.lang.Integer;@47ef968d}, nPlayerHandLimit=10, nInitialCardsInHand=4, nMaximumCardsInMarket=8, nInitialCamelInMarket=5, nMaximumCamelInGame=13, ifCustomized=true}
+-------------------------------
+Current player: 0
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=3, Magic=2, Spice=3, Cloth=1, Diamonds=3, Silver=4, Leather=5}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=0, nGoodTokensEmptyRoundEnd=4, nRoundsWinForGameWin=3, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=8, nInitialCardsInHand=5, nMaximumCardsInMarket=8, nInitialCamelInMarket=2, nMaximumCamelInGame=13, ifCustomized=false}
+Added sell card action: Cloth-1
+Camel num: 0
+Player hand: 2
+Player hand limit: 8
+Take non-camel card...
+Added take card action: Gold
+Added take card action: Spice
+Added take card action: Cloth
+Added take card action: Leather
+-------------------------------
+Current player: 1
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=3, Magic=2, Spice=3, Cloth=1, Diamonds=3, Silver=4, Leather=5}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=0, nGoodTokensEmptyRoundEnd=4, nRoundsWinForGameWin=3, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=8, nInitialCardsInHand=5, nMaximumCardsInMarket=8, nInitialCamelInMarket=2, nMaximumCamelInGame=13, ifCustomized=false}
+Camel num: 0
+Player hand: 8
+Player hand limit: 8
+Exception in thread "main" java.lang.AssertionError: No actions available in rollout! Last action: Take cards: {Leather=1}
 
+
+
+-------------------------------
+Current player: 1
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=1, Magic=2, Spice=5, Cloth=4, Diamonds=3, Silver=4, Leather=4}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=5, nGoodTokensEmptyRoundEnd=3, nRoundsWinForGameWin=2, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=9, nInitialCardsInHand=4, nMaximumCardsInMarket=6, nInitialCamelInMarket=3, nMaximumCamelInGame=14, ifCustomized=false}
+Added sell card action: Gold-1
+Camel num: 0
+Player hand: 5
+Player hand limit: 9
+Take non-camel card...
+Added take card action: Gold
+Added take card action: Cloth
+Added take card action: Silver
+-------------------------------
+Current player: 0
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=1, Magic=2, Spice=5, Cloth=4, Diamonds=3, Silver=4, Leather=4}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=5, nGoodTokensEmptyRoundEnd=3, nRoundsWinForGameWin=2, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=9, nInitialCardsInHand=4, nMaximumCardsInMarket=6, nInitialCamelInMarket=3, nMaximumCamelInGame=14, ifCustomized=false}
+Camel num: 0
+Player hand: 9
+Player hand limit: 9
+Exception in thread "main" java.lang.AssertionError: No actions available in rollout! Last action: Take cards: {Gold=1}
+
+
+
+-------------------------------
+Current player: 0
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=3, Magic=1, Spice=3, Cloth=4, Diamonds=5, Silver=2, Leather=2}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=7, nGoodTokensEmptyRoundEnd=4, nRoundsWinForGameWin=3, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=7, nInitialCardsInHand=6, nMaximumCardsInMarket=6, nInitialCamelInMarket=2, nMaximumCamelInGame=14, ifCustomized=false}
+Camel num: 0
+Player hand: 2
+Player hand limit: 7
+Take non-camel card...
+Added take card action: Spice
+Added take card action: Cloth
+Added take card action: Leather
+-------------------------------
+Current player: 1
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=3, Magic=1, Spice=3, Cloth=4, Diamonds=5, Silver=2, Leather=2}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=7, nGoodTokensEmptyRoundEnd=4, nRoundsWinForGameWin=3, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=7, nInitialCardsInHand=6, nMaximumCardsInMarket=6, nInitialCamelInMarket=2, nMaximumCamelInGame=14, ifCustomized=false}
+Camel num: 0
+Player hand: 7
+Player hand limit: 7
+Exception in thread "main" java.lang.AssertionError: No actions available in rollout! Last action: Take cards: {Cloth=1}
+
+
+
+
+-------------------------------
+Current player: 1
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=5, Magic=3, Spice=4, Cloth=4, Diamonds=3, Silver=1, Leather=1}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=10, nGoodTokensEmptyRoundEnd=3, nRoundsWinForGameWin=2, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=6, nInitialCardsInHand=6, nMaximumCardsInMarket=5, nInitialCamelInMarket=2, nMaximumCamelInGame=12, ifCustomized=false}
+Added sell card action: Silver-1
+Added sell card action: Leather-1
+Added sell card action: Leather-2
+Camel num: 0
+Player hand: 6
+Player hand limit: 6
+-------------------------------
+Current player: 0
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=5, Magic=3, Spice=4, Cloth=4, Diamonds=3, Silver=1, Leather=1}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=10, nGoodTokensEmptyRoundEnd=3, nRoundsWinForGameWin=2, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=6, nInitialCardsInHand=6, nMaximumCardsInMarket=5, nInitialCamelInMarket=2, nMaximumCamelInGame=12, ifCustomized=false}
+Camel num: 0
+Player hand: 6
+Player hand limit: 6
+Exception in thread "main" java.lang.AssertionError: No actions available in rollout! Last action: Sell 1 Silver cards
+
+
+
+-------------------------------
+Current player: 1
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=5, Magic=1, Spice=2, Cloth=2, Diamonds=3, Silver=2, Leather=2}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=7, nGoodTokensEmptyRoundEnd=3, nRoundsWinForGameWin=2, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=9, nInitialCardsInHand=6, nMaximumCardsInMarket=5, nInitialCamelInMarket=5, nMaximumCamelInGame=10, ifCustomized=false}
+Added sell card action: Silver-2
+Added sell card action: Leather-2
+Camel num: 0
+Player hand: 6
+Player hand limit: 9
+Take non-camel card...
+Added take card action: Cloth
+Added take card action: Leather
+-------------------------------
+Current player: 0
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=5, Magic=1, Spice=2, Cloth=2, Diamonds=3, Silver=2, Leather=2}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=7, nGoodTokensEmptyRoundEnd=3, nRoundsWinForGameWin=2, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=9, nInitialCardsInHand=6, nMaximumCardsInMarket=5, nInitialCamelInMarket=5, nMaximumCamelInGame=10, ifCustomized=false}
+Camel num: 0
+Player hand: 9
+Player hand limit: 9
+Exception in thread "main" java.lang.AssertionError: No actions available in rollout! Last action: Sell 2 Leather cards
+
+
+
+
+no error--------------
+-------------------------------
+Current player: 1
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=1, Magic=1, Spice=2, Cloth=2, Diamonds=2, Silver=1, Leather=2}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=2, nGoodTokensEmptyRoundEnd=3, nRoundsWinForGameWin=3, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=7, nInitialCardsInHand=5, nMaximumCardsInMarket=6, nInitialCamelInMarket=3, nMaximumCamelInGame=12, ifCustomized=false}
+Added sell card action: Spice-2
+Camel num: 0
+Player hand: 2
+Player hand limit: 7
+Take non-camel card...
+Added take card action: Cloth
+Added take card action: Silver
+Added take card action: Leather
+-------------------------------
+Current player: 1
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=1, Magic=1, Spice=2, Cloth=2, Diamonds=2, Silver=1, Leather=2}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=2, nGoodTokensEmptyRoundEnd=3, nRoundsWinForGameWin=3, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=7, nInitialCardsInHand=5, nMaximumCardsInMarket=6, nInitialCamelInMarket=3, nMaximumCamelInGame=12, ifCustomized=false}
+Added sell card action: Spice-2
+Camel num: 0
+Player hand: 2
+Player hand limit: 7
+Take non-camel card...
+Added take card action: Cloth
+Added take card action: Silver
+Added take card action: Leather
+GAME_OVER
+Player 0 finishes at position 2 with score: 50
+Player 1 finishes at position 1 with score: 78
+
+
+-------------------------------
+Current player: 0
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=2, Magic=2, Spice=2, Cloth=2, Diamonds=2, Silver=2, Leather=2}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=0, nGoodTokensEmptyRoundEnd=4, nRoundsWinForGameWin=1, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=8, nInitialCardsInHand=6, nMaximumCardsInMarket=7, nInitialCamelInMarket=5, nMaximumCamelInGame=15, ifCustomized=true}
+Camel num: 0
+Player hand: 2
+Player hand limit: 8
+Take non-camel card...
+Added take card action: Diamonds
+Added take card action: Silver
+Added take card action: Leather
+-------------------------------
+Current player: 0
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=2, Magic=2, Spice=2, Cloth=2, Diamonds=2, Silver=2, Leather=2}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=0, nGoodTokensEmptyRoundEnd=4, nRoundsWinForGameWin=1, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=8, nInitialCardsInHand=6, nMaximumCardsInMarket=7, nInitialCamelInMarket=5, nMaximumCamelInGame=15, ifCustomized=true}
+Camel num: 0
+Player hand: 2
+Player hand limit: 8
+Take non-camel card...
+Added take card action: Diamonds
+Added take card action: Silver
+Added take card action: Leather
+GAME_OVER
+Player 0 finishes at position 1 with score: 81
+Player 1 finishes at position 2 with score: 52
+
+
+
+-------------------------------
+Current player: 1
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=2, Magic=2, Spice=1, Cloth=2, Diamonds=2, Silver=2, Leather=2}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=7, nGoodTokensEmptyRoundEnd=2, nRoundsWinForGameWin=2, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=7, nInitialCardsInHand=7, nMaximumCardsInMarket=5, nInitialCamelInMarket=5, nMaximumCamelInGame=13, ifCustomized=true}
+Added sell card action: Spice-1
+Added sell card action: Spice-2
+Added sell card action: Diamonds-2
+Camel num: 0
+Player hand: 7
+Player hand limit: 7
+-------------------------------
+Current player: 0
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=2, Magic=2, Spice=1, Cloth=2, Diamonds=2, Silver=2, Leather=2}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=7, nGoodTokensEmptyRoundEnd=2, nRoundsWinForGameWin=2, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=7, nInitialCardsInHand=7, nMaximumCardsInMarket=5, nInitialCamelInMarket=5, nMaximumCamelInGame=13, ifCustomized=true}
+Added sell card action: Cloth-0
+Added sell card action: Silver-0
+Camel num: 0
+Player hand: 3
+Player hand limit: 7
+Take non-camel card...
+Added take card action: Spice
+Added take card action: Cloth
+Added take card action: Silver
+Added take card action: Leather
+GAME_OVER
+Player 0 finishes at position 1 with score: 67
+Player 1 finishes at position 2 with score: 49
+
+
+
+
+
+-------------------------------
+Current player: 1
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=1, Magic=1, Spice=1, Cloth=1, Diamonds=1, Silver=1, Leather=2}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=7, nGoodTokensEmptyRoundEnd=4, nRoundsWinForGameWin=1, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=7, nInitialCardsInHand=7, nMaximumCardsInMarket=6, nInitialCamelInMarket=4, nMaximumCamelInGame=12, ifCustomized=true}
+Added sell card action: Gold-1
+Added sell card action: Gold-2
+Added sell card action: Spice-1
+Camel num: 0
+Player hand: 4
+Player hand limit: 7
+Take non-camel card...
+Added take card action: Magic
+Added take card action: Spice
+Added take card action: Cloth
+Added take card action: Silver
+Added take card action: Leather
+-------------------------------
+Current player: 0
+Parameters: JaipurParameters{goodNCardsMinimumSell={Gold=1, Magic=1, Spice=1, Cloth=1, Diamonds=1, Silver=1, Leather=2}, bonusTokensAvailable={3=[Ljava.lang.Integer;@65e2dbf3, 4=[Ljava.lang.Integer;@4f970963, 5=[Ljava.lang.Integer;@61f8bee4}, nPointsMostCamels=7, nGoodTokensEmptyRoundEnd=4, nRoundsWinForGameWin=1, goodTokensProgression={Gold=[Ljava.lang.Integer;@7b49cea0, Spice=[Ljava.lang.Integer;@887af79, Cloth=[Ljava.lang.Integer;@7fac631b, Diamonds=[Ljava.lang.Integer;@5b87ed94, Silver=[Ljava.lang.Integer;@6e0e048a, Leather=[Ljava.lang.Integer;@5bc79255}, nPlayerHandLimit=7, nInitialCardsInHand=7, nMaximumCardsInMarket=6, nInitialCamelInMarket=4, nMaximumCamelInGame=12, ifCustomized=true}
+Added sell card action: Leather-0
+Camel num: 0
+Player hand: 2
+Player hand limit: 7
+Take non-camel card...
+Added take card action: Gold
+Added take card action: Cloth
+Added take card action: Diamonds
+Added take card action: Silver
+Added take card action: Leather
+GAME_OVER
+Player 0 finishes at position 1 with score: 75
+Player 1 finishes at position 2 with score: 62

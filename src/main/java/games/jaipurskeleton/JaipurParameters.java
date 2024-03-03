@@ -69,16 +69,16 @@ public class JaipurParameters extends TunableParameters {
         // add tunable params
         addTunableParameter("nPointsMostCamels", nPointsMostCamels, Arrays.asList(0, 2, 5, 7, 10));
         for(JaipurCard.GoodType gt: goodNCardsMinimumSell.keySet()) {
-            addTunableParameter(gt.name() + "minSell", goodNCardsMinimumSell.get(gt), Arrays.asList(1, 2, 3, 4, 5));
+            addTunableParameter(gt.name() + "minSell", goodNCardsMinimumSell.get(gt), Arrays.asList(1, 2));
         }
         // TODO: add the rest of params as tunable params(ignore goodTokensProgression and bonusTokensAvailable
         addTunableParameter("nGoodTokensEmptyRoundEnd", nGoodTokensEmptyRoundEnd, Arrays.asList(2, 3, 4));
-        addTunableParameter("nRoundsWinForGameWin", nRoundsWinForGameWin, Arrays.asList(2, 3));
-        addTunableParameter("nPlayerHandLimit", nPlayerHandLimit, Arrays.asList(6, 7, 8, 9, 10));
-        addTunableParameter("nInitialCardsInHand", nInitialCardsInHand, Arrays.asList(4, 5, 6)); // always less than nPlayerHandLimit
-        addTunableParameter("nMaximumCardsInMarket", nMaximumCardsInMarket, Arrays.asList(5, 6, 7, 8));
+        addTunableParameter("nRoundsWinForGameWin", nRoundsWinForGameWin, Arrays.asList(1, 2, 3));
+        addTunableParameter("nPlayerHandLimit", nPlayerHandLimit, Arrays.asList(7, 8, 9, 10));
+        addTunableParameter("nInitialCardsInHand", nInitialCardsInHand, Arrays.asList(4, 5, 6, 7)); // always less than nPlayerHandLimit
+        addTunableParameter("nMaximumCardsInMarket", nMaximumCardsInMarket, Arrays.asList(5, 6, 7, 8, 9));
         addTunableParameter("nInitialCamelInMarket", nInitialCamelInMarket, Arrays.asList(2, 3, 4, 5)); // always less than nMaximumCardsInMarket
-        addTunableParameter("nMaximumCamelInGame", nMaximumCamelInGame, Arrays.asList(10, 11, 12, 13, 14));
+        addTunableParameter("nMaximumCamelInGame", nMaximumCamelInGame, Arrays.asList(10, 11, 12, 13, 14, 15));
         addTunableParameter("ifCustomized", ifCustomized, Arrays.asList(true, false));
     }
 

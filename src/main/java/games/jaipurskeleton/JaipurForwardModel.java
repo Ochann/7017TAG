@@ -217,6 +217,8 @@ public class JaipurForwardModel extends StandardForwardModel {
         Map<JaipurCard.GoodType, Counter> playerHand = jgs.playerHands.get(currentPlayer);
 
         System.out.println("-------------------------------");
+        System.out.println("Current player: " + currentPlayer);
+        System.out.println("Parameters: " + jp);
 
         // Can sell cards from hand
         // Can sell cards with all-purpose cards
@@ -232,9 +234,11 @@ public class JaipurForwardModel extends StandardForwardModel {
                         if (allInHand >= minimumRequired) {
                             for (int i = minimumRequired; i <= inHand; i++) {
                                 actions.add(new SellCards(gt, i, false, 0));
+                                System.out.println("Added sell card action: " + gt + "-" + i);
                             }
                             for (int i = 1; i <= magicInHand; i++) {
                                 actions.add(new SellCards(gt, inHand + i, true, i));
+                                System.out.println("Added sell card action: " + gt + "-" + (inHand-i));
                             }
                         }
                     }
@@ -246,6 +250,7 @@ public class JaipurForwardModel extends StandardForwardModel {
                 if (inHand >= minimumRequired) {
                     for (int i = minimumRequired; i <= inHand; i++) {
                         actions.add(new SellCards(gt, i, false, 0));
+                        System.out.println("Added sell card action: " + gt + "-" + i);
                     }
                 }
             }
